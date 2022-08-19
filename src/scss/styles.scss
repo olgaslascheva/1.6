@@ -17,8 +17,16 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 320px 1120px;
+  @media (min-width: $screen-xl) {
+    display: grid;
+    grid-template-columns: 320px 1120px;
+  }
+}
+
+.content {
+  @media (min-width: $screen-xl) {
+    grid-column: 2/3;
+  }
 }
 
 .menu {
@@ -48,10 +56,11 @@ body {
   transition: 1s;
   z-index: 2;
   @media (min-width: $screen-xl) {
-    grid-column-start: 0;
+    grid-column: 1/2;
     position: static;
     left: 0;
     box-shadow: none;
+    visibility: visible;
   }
 }
 
@@ -234,7 +243,6 @@ body {
 /* ------- header ------- */
 
 .header {
-  grid-column-start: 1;
   height: 88px;
   border-bottom: 1px solid $lite-green;
   background-color: $white;
