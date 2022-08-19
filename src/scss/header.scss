@@ -1,0 +1,85 @@
+/* ------- header ------- */
+
+.header {
+  height: 88px;
+  border-bottom: 1px solid $lite-green;
+  background-color: $white;
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+  &__left {
+    width: 154px;
+    margin-left: 16px;
+    @media (min-width: $screen-md) {
+        width: 180px;
+        margin-left: 24px;
+      }
+    .header__devider {
+      @media (min-width: $screen-md) {
+        width: 2px;
+        height: 32px;
+        background-color: $grey-border;
+      }
+    }
+  }
+  &__right {
+    width: 118px;
+    margin-right: 16px;
+    @media (min-width: $screen-md) {
+        width: 290px;
+        margin-right: 24px;
+    }
+    .contact-wrapper {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: flex;
+        width: 152px;
+      }
+    }
+    .header__devider {
+      width: 2px;
+      height: 32px;
+      background-color: $grey-border;
+    }
+  }
+}
+
+.header__burger::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  bottom: 12px;
+  left: 11px;
+  width: 18px;
+  height: 16px;
+  background: url("../img/burger.svg") no-repeat;
+}
+
+.buttons-top {
+  width: 96px;
+}
+
+.request::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/request.svg") no-repeat;
+}
+
+.status::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  bottom: 10px;
+  left: 12px;
+  width: 16px;
+  height: 20px;
+  background: url("../img/status.svg") no-repeat;
+}

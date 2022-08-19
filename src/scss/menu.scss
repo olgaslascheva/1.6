@@ -143,7 +143,7 @@
   flex-direction: column;
   align-items: flex-start;
   height: 116px;
-  &__buttons {
+  .contact-wrapper {
     width: 152px;
   }
   &__e-mail {
@@ -159,7 +159,20 @@
   }
 }
 
-.contact__call::before {
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: $pink;
+  border-radius: 50%;
+  position: relative;
+}
+
+.button:hover {
+  filter: drop-shadow(0 0 5px  $grey);
+  transition-duration: 0.5s;
+}
+
+.call::before {
   content: "";
   position: absolute;
   top: 11px;
@@ -171,7 +184,7 @@
   background: url("../img/call.svg") no-repeat;
 }
 
-.contact__chat::before {
+.chat::before {
   content: "";
   position: absolute;
   top: 11px;
@@ -183,7 +196,7 @@
   background: url("../img/chat.svg") no-repeat;
 }
 
-.contact__profile::before {
+.profile::before {
   content: "";
   position: absolute;
   top: 10px;
