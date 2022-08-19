@@ -20,6 +20,7 @@ body {
   @media (min-width: $screen-xl) {
     display: grid;
     grid-template-columns: 320px 1120px;
+    justify-content: center;
   }
 }
 
@@ -38,6 +39,12 @@ body {
   height: 100%;
   z-index: 50;
   visibility: hidden;
+  @media (min-width: $screen-xl) {
+    grid-column: 1/2;
+    position: static;
+    background-color: $grey-background;
+    visibility: visible;
+  }
 }
 
 .menu.opened {
@@ -56,11 +63,9 @@ body {
   transition: 1s;
   z-index: 2;
   @media (min-width: $screen-xl) {
-    grid-column: 1/2;
     position: static;
     left: 0;
     box-shadow: none;
-    visibility: visible;
   }
 }
 
