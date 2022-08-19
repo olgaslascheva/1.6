@@ -1,73 +1,65 @@
 /* ------- services ------- */
-
-.services__header .buttons-top {
-  display: none;
+.services__header {
+  margin: 24px 16px;
+  .buttons-top {
+    display: none;
+  }
+  .services__heading {
+    display: flex;
+    align-items: center;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      width: 4px;
+      height: 40px;
+      background-color: $green;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
 }
 
-.services__heading {
-  font-family: 'TT Lakes', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
-}
-
-.services__container-for-heading {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  margin-top: 24px;
-}
-
-.services__container-for-heading::before {
-  content: "";
-  width: 4px;
-  height: 40px;
-  background-color: $green;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin-right: 12px;
-}
-
-.services__slide-menu {
+.slide-menu {
   display: flex;
   overflow-x: scroll;
   margin: 24px 16px;
-}
-
-.services__slide-menu::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-.services__item {
-  flex-shrink: 0;
-  font-family: 'TT Lakes', sans-serif;
-  font-size: 16px;
-  color:  $grey;
-  background-color:  $grey-background;
-  border: none;
-  padding: 8px 15px;
-}
-
-.services__item:first-child {
-  box-sizing: border-box;
-  border: 2px solid $lite-green;
-  border-radius: 5px;
-  background-color: $white;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  &__item {
+    flex-shrink: 0;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    color: $grey;
+    background-color: $grey-background;
+    border: none;
+    padding: 8px 15px;
+    &:first-child {
+      box-sizing: border-box;
+      border: 2px solid $lite-green;
+      border-radius: 5px;
+      background-color: $white;
+    }
+  }
 }
 
 .services__container-for-text {
   margin: 0 16px;
-}
-
-.services__text {
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  line-height: 18px;
-}
-
-.services__text:last-of-type {
-  display: none;
+  .services__text {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    &:last-of-type {
+      display: none;
+    }
+  }
 }
 
 .container-for-read-more {
