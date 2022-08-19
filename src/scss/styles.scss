@@ -1,25 +1,6 @@
-@font-face {
-  font-family: 'TT Lakes';
-  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'TT Lakes';
-  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'TT Lakes';
-  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-* {font-family: 'TT Lakes';}
+* {font-family: 'TT Lakes', sans-serif;}
 p {margin: 0;}
 a {text-decoration: none;}
 button {background-color: #ffffff; border: none; padding: 0}
@@ -28,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
-  font-family: 'TT Lakes';
+  font-family: 'TT Lakes', sans-serif;
 }
 
 .wrapper {
@@ -141,7 +122,7 @@ body {
   display: inline-block;
   width: 100%;
   padding: 4px 0;
-  color: #1B1C21;
+  color: $black;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -212,7 +193,7 @@ body {
 }
 
 .contact__e-mail {
-  color: #1B1C21;
+  color: $black;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -329,7 +310,7 @@ body {
 }
 
 .services__heading {
-  font-family: 'TT Lakes';
+  font-family: 'TT Lakes', sans-serif;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
@@ -365,7 +346,7 @@ body {
 
 .services__item {
   flex-shrink: 0;
-  font-family: 'TT Lakes';
+  font-family: 'TT Lakes', sans-serif;
   font-size: 16px;
   color: #7E7E82;
   background-color: #f8f8f8;
@@ -412,7 +393,7 @@ body {
 
 .read-more {
   border: none;
-  font-family: 'TT Lakes';
+  font-family: 'TT Lakes', sans-serif;
   font-weight: 500;
   font-size: 16px;
   background-color: #f8f8f8;
@@ -662,7 +643,7 @@ body {
 }
 
 .label {
-  font-family: 'TT Lakes';
+  font-family: 'TT Lakes', sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
