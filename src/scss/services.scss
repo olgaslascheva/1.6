@@ -2,8 +2,22 @@
 
 .services__header {
   margin: 24px 16px;
+  @media (min-width: $screen-xl) {
+    margin-top: 42px;
+  }
   .buttons-top {
     display: none;
+    @media (min-width: $screen-xl) {
+      display: flex;
+      width: 375px;
+      margin-right: 32px;
+    }
+    label {
+      @media (min-width: $screen-xl) {
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
   }
   .services__heading {
     display: flex;
@@ -13,6 +27,9 @@
     font-size: 28px;
     line-height: 40px;
     position: relative;
+    @media (min-width: $screen-xl) {
+      margin: 0;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -24,6 +41,9 @@
       border-bottom-right-radius: 30px;
       @media (min-width: $screen-md) {
         margin-right: 20px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-right: 30px;
       }
     }
   }
@@ -37,6 +57,11 @@
   margin: 24px 16px;
   @media (min-width: $screen-md) {
     margin: 32px 24px;
+  }
+  @media (min-width: $screen-xl) {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin: 8px 0 8px 32px;
   }
   &::-webkit-scrollbar {
     width: 0;
@@ -61,22 +86,53 @@
 
 // ----- text
 
-.services__container-for-text {
-  margin: 0 16px;
+.services__body {
   @media (min-width: $screen-md) {
-    margin: 0;
-  }
-  .services__text {
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    line-height: 18px;
-    &:last-of-type {
-      display: none;
-    }
-  }
-  .show-more {
     display: flex;
-    margin: 16px 0 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+    margin: 0 24px;
+  }
+  @media (min-width: $screen-xl) {
+    gap: 36px;
+    margin-left: 32px;
+  }
+  .services__container-for-text {
+    margin: 0 16px;
+    @media (min-width: $screen-md) {
+      margin: 0;
+    }
+    .services__text {
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      line-height: 18px;
+      @media (min-width: $screen-md) {
+        line-height: 20px;
+      }
+      &:last-of-type {
+        display: none;
+        @media (min-width: $screen-md) {
+          display: block;
+          margin-top: 16px;
+        }
+        span {
+          @media (min-width: $screen-md) {
+            display: none;
+          }
+          @media (min-width: $screen-xl) {
+            display: inline;
+          }
+        }
+      }
+    }
+    .show-more {
+      display: flex;
+      margin: 16px 0 24px;
+      @media (min-width: $screen-md) {
+        margin-top: 10px;
+      }
+    }
   }
 }
 
@@ -85,88 +141,23 @@
 .services__image {
   width: 320px;
   height: auto;
-}
-
-@media (min-width: $screen-md) {
-.services__body {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 48px;
-    margin: 0 24px;
-  }
-
-  .services__text {
-    line-height: 20px;
-  }
-
-  .services__text:last-of-type {
-    display: block;
-    margin-top: 16px;
-  }
-
-  .services__text:last-of-type span {
-    display: none;
-  }
-
-  .services__container-for-read-more {
-    margin-top: 10px;
-  }
-
-  .services__image {
+  @media (min-width: $screen-md) {
     width: 360px;
     border-radius: 5px;
   }
+  @media (min-width: $screen-xl) {
+    width: 100%;
+  }
 }
 
-@media (min-width: $screen-xl) {
-  .services__container-for-heading {
-    margin: 0;
-  }
-
-  .services__container-for-heading::before {
-    margin-right: 30px;
-  }
-
-  .services__header {
-    margin-top: 42px;
-  }
-
-  .services__header .buttons-top {
-    display: flex;
-    width: 375px;
-    margin-right: 32px;
-  }
-
-  .services__buttons-top .wrapper:first-child {
+.services__buttons-top .wrapper:first-child {
+  @media (min-width: $screen-xl) {
     width: 174px;
   }
+}
 
-  .services__buttons-top .wrapper:last-child {
+.services__buttons-top .wrapper:last-child {
+  @media (min-width: $screen-xl) {
     width: 168px;
-  }
-
-  .buttons-top label {
-    font-weight: 500;
-    font-size: 16px;
-  }
-
-  .services__slide-menu {
-    flex-wrap: wrap;
-    overflow-x: hidden;
-    margin: 8px 0 8px 32px;
-  }
-
-  .services__body {
-    gap: 36px;
-    margin-left: 32px;
-  }
-
-  .services__text:last-of-type span   {
-    display: inline;
-  }
-
-  .services__image {
-    width: 100%;
   }
 }

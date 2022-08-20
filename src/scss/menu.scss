@@ -10,7 +10,6 @@
   @media (min-width: $screen-xl) {
     grid-column: 1/2;
     position: static;
-    background-color: $grey-background;
     visibility: visible;
   }
   &__wrapper {
@@ -29,6 +28,7 @@
       position: static;
       left: 0;
       box-shadow: none;
+      background-color: $grey-background;
     }
   }
   &__overlay {
