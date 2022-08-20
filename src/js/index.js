@@ -1,6 +1,7 @@
 import '../scss/style.scss';
 
 import './menu.js';
+import './read-more.js';
 import './brands__show-more.js';
 
 import Swiper, { Pagination } from 'swiper';
@@ -9,7 +10,7 @@ const swiper = document.querySelector('.swiper');
 let mobileSwiper;
 
 function initMobileSwiper() {
-  if (window.innerWidth <= 600 && swiper.dataset.mobile == 'false') {
+  if (window.innerWidth <= 600 && swiper.dataset.mobile === 'false') {
     mobileSwiper = new Swiper (swiper, {
       modules: [ Pagination],
       pagination: {

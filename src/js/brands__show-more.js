@@ -1,15 +1,14 @@
-let readMore = document.querySelector('#brands__show-more');
-console.log(readMore);
+let showMore = document.querySelector('#brands__show-more');
 let label = document.querySelector('.brands__label');
-let icon = readMore.querySelector('.brands__icon');
+let icon = showMore.querySelector('.brands__icon');
 let list = document.querySelector('.brands__list');
 
-readMore.addEventListener('click', function() {
+showMore.addEventListener('click', function() {
   list.classList.toggle('showed');
-  readMore.classList.toggle('active');
+  showMore.classList.toggle('active');
   icon.classList.toggle('icon--rotate');
 
-  if (readMore.classList.contains('active')) {
+  if (showMore.classList.contains('active')) {
     label.textContent = 'Скрыть';
   } else {
     label.textContent = 'Показать все';
