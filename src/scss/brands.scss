@@ -33,8 +33,9 @@
     margin: 16px 0 32px 16px;
     padding: 0;
     width: auto;
-    height: auto;
+    height: 150px;
     list-style: none;
+    transition: 1s;
     @media (min-width: $screen-md) {
       display: grid;
       column-gap: 24px;
@@ -116,11 +117,15 @@
   }
 }
 
-  .item-hidden {
-    @media (min-width: $screen-md) {
-      display: none;
-    }
-  }
+.brands__list.showed {
+  height: 320px;
+  transition: 1s;
+}
+  //.item-hidden {
+  //  @media (min-width: $screen-md) {
+  //    display: none;
+  //  }
+  //}
 
 @keyframes rotate {
   to {
@@ -136,9 +141,9 @@
   }
 }
 
-.item-hidden:nth-child(7),
-.item-hidden:nth-child(8) {
-  @media (min-width: $screen-xl) {
-    display: block;
-  }
-}
+//.item-hidden:nth-child(7),
+//.item-hidden:nth-child(8) {
+//  @media (min-width: $screen-xl) {
+//    display: block;
+//  }
+//}

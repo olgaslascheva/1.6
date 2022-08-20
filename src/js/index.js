@@ -1,7 +1,7 @@
 import '../scss/style.scss';
 
 import './menu.js';
-import './show-more.js';
+import './brands__show-more.js';
 
 import Swiper, { Pagination } from 'swiper';
 

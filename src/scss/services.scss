@@ -104,19 +104,26 @@
       margin: 0;
     }
     .services__text {
-      font-size: 14px;
-      letter-spacing: 0.2px;
-      line-height: 18px;
+      height: 100px;
+     .text__item {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        line-height: 18px;
+        margin-top: 16px;
+       visibility: hidden;
+        &:first-child {
+          visibility: visible;
+        }
+      }
       @media (min-width: $screen-md) {
         line-height: 20px;
       }
-      &:last-of-type {
-        display: none;
-        @media (min-width: $screen-xl) {
-          display: block;
-          margin-top: 16px;
-        }
-      }
+      //&:last-of-type {
+      //  display: none;
+      //  @media (min-width: $screen-xl) {
+      //    display: block;
+      //  }
+      //}
     }
     .show-more {
       display: flex;
