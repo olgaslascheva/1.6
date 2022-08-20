@@ -112,17 +112,9 @@
       }
       &:last-of-type {
         display: none;
-        @media (min-width: $screen-md) {
+        @media (min-width: $screen-xl) {
           display: block;
           margin-top: 16px;
-        }
-        span {
-          @media (min-width: $screen-md) {
-            display: none;
-          }
-          @media (min-width: $screen-xl) {
-            display: inline;
-          }
         }
       }
     }

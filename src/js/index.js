@@ -1,24 +1,16 @@
 import '../scss/style.scss';
 
 import './menu.js';
+import './show-more.js';
 
 import Swiper, { Pagination } from 'swiper';
 
-// const swiper = new Swiper('.swiper', {
-//   modules: [ Pagination],
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   slidesPerView: 1.25,
-// });
-
-let swipers = document.querySelector('.swiper');
+const swiper = document.querySelector('.swiper');
 let mobileSwiper;
 
 function initMobileSwiper() {
-  if (window.innerWidth <= 600 && swipers.dataset.mobile == 'false') {
-    mobileSwiper = new Swiper (swipers, {
+  if (window.innerWidth <= 600 && swiper.dataset.mobile == 'false') {
+    mobileSwiper = new Swiper (swiper, {
       modules: [ Pagination],
       pagination: {
         el: '.swiper-pagination',
@@ -27,11 +19,11 @@ function initMobileSwiper() {
       slidesPerView: 1.25,
     });
 
-    swipers.dataset.mobile = 'true';
+    swiper.dataset.mobile = 'true';
   }
 
   if (window.innerWidth > 600) {
-    swipers.dataset.mobile = 'false';
+    swiper.dataset.mobile = 'false';
 
     mobileSwiper.destroy();
   }
